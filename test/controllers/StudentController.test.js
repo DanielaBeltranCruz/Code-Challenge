@@ -10,7 +10,7 @@ describe("Prueba unitaria para StudentController", () => {
         expect(StudentsEmails).toContain("Todd@visualpartnership.xyz");
         expect(StudentsEmails).toContain("Sharlene@visualpartnership.xyz");
         expect(StudentsEmails).toContain("Haynes@visualpartnership.xyz");
-        expect(StudentsEmails).toContain("Simon@visualpartnership.xyz");
+        expect(StudentsEmails).toContain("Montoya@visualpartnership.xyz");
     });
     test("3: Imprimir los estudiantes con más de 500 créditos", () => {
         const StudentCredits = StudentController.getCredits();
