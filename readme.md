@@ -10,7 +10,7 @@ Consulta [Code Challenge](https://github.com/LaunchX-InnovaccionVirtual/MissionN
 
 ## Dependencias usadas 
 
-**Node.js**
+🎯 **Node.js**
 
 Proyecto creado en Node.js versión 16.14.2.
 
@@ -18,7 +18,7 @@ Creación del proyecto con el comando `npm init` para generar el archivo *packag
 
 Puedes consultar: <https://nodejs.org/es/download/>
 
-**Jest - Pruebas unitarias**
+🎯 **Jest - Pruebas unitarias**
 
 El proyecto cuenta con una carpeta llamada `test`, en la cual se encuentran scripts referentes a pruebas unitarias para comprobar el funcionamiento del código. 
 
@@ -35,13 +35,13 @@ Comando para ejecutar los scripts de pruebas una vez instalado jest:
 
 Puedes consultar: <https://jestjs.io/docs/getting-started>
 
-**GitHub Actions - Pruebas automatizadas**
+🎯 **GitHub Actions - Pruebas automatizadas**
 
 Este proyecto maneja GitHub Actions para ejecutar pruebas automatizadas.
 
 Dentro de la carpeta `.github`, se encuentra otra carpeta llamada `workflows` que contiene el archivo `test.yml`, el cual permite la automatización de las pruebas cada que se realiza un `git push` al repositorio remoto.
 
-**Express - API**
+🎯 **Express - API**
 
 Para la creación de la API, se instaló Express.
 
@@ -56,7 +56,7 @@ Comando para ejecutar el servidor automatizado:
 
 Puedes consultar: <https://expressjs.com/es/starter/installing.html>
 
-**ESLint**
+🎯 **ESLint**
 
 Permite revisar la sintaxis del código y darle estilo mediante reglas automatizadas.
 
@@ -153,7 +153,7 @@ Para deshabilitar el servidor, es necesario ubicarse en la consola de la termina
 
 ![Imagen](https://github.com/DanielaBeltranCruz/Code-Challenge/blob/master/images/endpoint_02.PNG)
 
-1. Endpoint para consultar todos los estudiantes que tengan `credits` mayor a 500.
+3. Endpoint para consultar todos los estudiantes que tengan `credits` mayor a 500.
 
 ![Imagen](https://github.com/DanielaBeltranCruz/Code-Challenge/blob/master/images/endpoint_03.PNG)
 
