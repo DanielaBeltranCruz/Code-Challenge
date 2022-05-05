@@ -1,4 +1,6 @@
-# 💥 Code Challenge
+# 💥 Code Challenge 
+
+Consulta [Code Challenge](https://github.com/LaunchX-InnovaccionVirtual/MissionNodeJS/blob/main/semanas/semana_4/5_code_challenge.md) para ver a detalle en que consiste el proyecto.
 
 ✔️ **Requerimientos del proyecto**
 
@@ -54,13 +56,13 @@ Puedes consultar: <https://expressjs.com/es/starter/installing.html>
 
 **ESLinter**
 
-Permite revisar la sintaxis del código y darle estilo meediante reglas automatizadas.
+Permite revisar la sintaxis del código y darle estilo mediante reglas automatizadas.
 
 Comando para instalar Linter:
 + `npm install eslint --save-dev`
 
 Comando para configurar Linter:
-+ `npm init @eslint/config
++ `npm init @eslint/config`
   
 Comando para buscar las inconsistencias de escritura:
 + `npm run linter`
@@ -77,6 +79,42 @@ Consulta [.eslintrc.js](https://github.com/DanielaBeltranCruz/Code-Challenge/blo
 Puedes consultar: <https://eslint.org/docs/user-guide/getting-started>
 
 ## Diseño del proyecto
+
+El proyecto esta estructurado de la siguiente manera:
++ .github/workflows - Esta carpeta contiene un archivo `.yml`que permite el manejo de pruebas automatizadas usando GitHub Actions.
++ lib - Dentro de esta carpeta se encuentran tres carpetas más que contienen los scripts necesarios para dar funcionalidad a cada endpoint requerido.
++ test - Esta carpeta contiene los archivos de pruebas de cada script de la carpeta anterior.
++ .eslintrc.js - Este archivo contiene las reglas a seguir para corregir la sintaxis.
++ .gitignore - Este archivo permite ignorar la carpeta `node_modules` que se crea cuando se instala alguna dependencia y la cual no debe ser versionada. 
++ package-lock.json - Este archivo se crea y se va actualizando cada que se instala una dependencia nueva al proyecto.
++ package.json - Este archivo contiene la información referente a las dependencias instaladas así como también las configuraciones de las dependencias.
++ visualpartnerts.json - Este archivo contiene la base de datos a utilizar en formato JSON.
+
+#### Diagramas de las clases y métodos usados
+
+```mermaid
+flowchart TD
+    A[Reader] --> B[StudentService]
+    B --> C[StudentController]
+    C --> D[Server]
+```
+
+```mermaid
+ classDiagram
+     class StudentController{
+          + static getAllStudents()
+          + static getEmails()
+          + static getCredits()
+      }
+      class StudentService{
+          + static getStudents()
+          + static getEmailsWithCertification(students)
+          + static getCredits(students)
+      }
+      class Reader{
+          + static static readJsonFile(path)
+      }
+```
 
 ## Explicación de la API
 
