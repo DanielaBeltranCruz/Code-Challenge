@@ -12,7 +12,7 @@ describe("Prueba unitaria para StudentController", () => {
         expect(StudentsEmails).toContain("Haynes@visualpartnership.xyz");
         expect(StudentsEmails).toContain("Montoya@visualpartnership.xyz");
     });
-   test("3: Imprimir los estudiantes con más de 500 créditos", () => {
+    test("3: Imprimir los estudiantes con más de 500 créditos", () => {
         const StudentCredits = StudentController.getCredits();
         expect(StudentCredits).not.toBeUndefined();
     });
