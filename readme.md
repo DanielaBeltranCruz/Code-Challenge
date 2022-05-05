@@ -90,14 +90,17 @@ El proyecto esta estructurado de la siguiente manera:
 + package.json - Este archivo contiene la información referente a las dependencias instaladas así como también las configuraciones de las dependencias.
 + visualpartnerts.json - Este archivo contiene la base de datos a utilizar en formato JSON.
 
-#### Diagramas de las clases y métodos usados
+#### Diagrama de funcionalidad de la API
 
 ```mermaid
 flowchart TD
-    A[Reader] --> B[StudentService]
-    B --> C[StudentController]
-    C --> D[Server]
+    A[JSON] --> B[Reader]
+    B --> C[StudentService]
+    C --> D[StudentController]
+    D --> E[Server]
+    E --> F[API]
 ```
+#### Diagramas del diseño de las clases y sus métodos correspondientes
 
 ```mermaid
  classDiagram
@@ -118,6 +121,36 @@ flowchart TD
 
 ## Explicación de la API
 
-¿Cómo consultarla?
-Formato al que va a responder
-Ejemplos
+Para la construcción de la API de este proyecto, se maneja la carpeta `lib` que contiene las siguientes carpetas: `controllers`, `services` y `utils`; y un script llamado `server.js`.
+
++ Carpeta **`utils`** contiene un archivo llamado `Reader.js` el cual permite la lectura del archivo `visualpartners.json` para obtener datos.
++ Carpeta **`services`** contiene el archivo `StudentService.js` que permite exportar la clase `StudentService`, la cual contiene tres métodos que nos permiten obtener la información para los endpoints.
++ Carpeta **`controllers`** contiene el archivo `StudentController.js` que permite exportar la clase `StudentController`, la cual contiene tres métodos que permiten conectar a la clase del archivo `StudentService.js` para enviar esa información a la API cada que sea requerida, es decir, es el enlace para las consultas de los endpoints.
++ Archivo **`server.js`** permite conectar con el archivo `StudentController.js` cada vez que se haga una solicitud sobre alguna consulta. Para realizar las peticiones se utilizó el método GET de HTTP.
+
+### 📍 ¿Cómo consultarla?
+
+| Endpoint | Request | Response |
+|---|---|---|
+| `"/"` | `localhost:3000/` | Mensaje "Code Challenge Api, Welcome!" |
+| `"/v1/students"` | `localhost:3000/v1/students` | Regresa todos los estudiantes |
+| `"/v1/students/emails"` | `localhost:3000/v1/students/emails` | Regresa una lista con los emails de los estudiantes que tienen certificación |
+| `"/v1/students/credits"` | `localhost:3000/v1/students/credits` | Regresa una lista de los estudiantes que tengan créditos mayor a 500 |
+
+Para consultar los endpoints es necesario habilitar el servidor usando el comando `npm run server` en la consola de la terminal. Habiendo hecho lo anterior, se abre el navegador y se escribe la url <localhost:3000/>, esta ruta permitirá acceder a la información consultada de acuerdo a los endpoints.
+
+Para deshabilitar el servidor, es necesario ubicarse en la consola de la terminal y presionar `ctrl + C`, después presionar `S` y dar enter.
+
+### Ejemplos
+
+1. Endpoint para consultar todos los estudiantes con todos sus campos.
+   
+![Imagen](https://github.com/DanielaBeltranCruz/Code-Challenge/blob/master/images/endpoint_01.PNG)
+
+2. Endpoint para consultar los emails de todos los estudiantes que tengan certificación `haveCertification`.
+
+![Imagen](https://github.com/DanielaBeltranCruz/Code-Challenge/blob/master/images/endpoint_02.PNG)
+
+1. Endpoint para consultar todos los estudiantes que tengan `credits` mayor a 500.
+
+![Imagen](https://github.com/DanielaBeltranCruz/Code-Challenge/blob/master/images/endpoint_03.PNG)
