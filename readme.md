@@ -16,6 +16,8 @@ Proyecto creado en Node.js versión 16.14.2.
 
 Creación del proyecto con el comando `npm init` para generar el archivo *package.json*.
 
+Puedes consultar: <https://nodejs.org/es/download/>
+
 **Jest - Pruebas unitarias**
 
 El proyecto cuenta con una carpeta llamada `test`, en la cual se encuentran scripts referentes a pruebas unitarias para comprobar el funcionamiento del código. 
@@ -54,7 +56,7 @@ Comando para ejecutar el servidor automatizado:
 
 Puedes consultar: <https://expressjs.com/es/starter/installing.html>
 
-**ESLinter**
+**ESLint**
 
 Permite revisar la sintaxis del código y darle estilo mediante reglas automatizadas.
 
@@ -132,12 +134,12 @@ Para la construcción de la API de este proyecto, se maneja la carpeta `lib` que
 
 | Endpoint | Request | Response |
 |---|---|---|
-| `"/"` | `localhost:3000/` | Mensaje "Code Challenge Api, Welcome!" |
-| `"/v1/students"` | `localhost:3000/v1/students` | Regresa todos los estudiantes |
-| `"/v1/students/emails"` | `localhost:3000/v1/students/emails` | Regresa una lista con los emails de los estudiantes que tienen certificación |
-| `"/v1/students/credits"` | `localhost:3000/v1/students/credits` | Regresa una lista de los estudiantes que tengan créditos mayor a 500 |
+| `"/"` | `http://localhost:3000/` | Mensaje "Code Challenge Api, Welcome!" |
+| `"/v1/students"` | `http://localhost:3000/v1/students` | Regresa todos los estudiantes |
+| `"/v1/students/emails"` | `http://localhost:3000/v1/students/emails` | Regresa una lista con los emails de los estudiantes que tienen certificación |
+| `"/v1/students/credits"` | `http://localhost:3000/v1/students/credits` | Regresa una lista de los estudiantes que tengan créditos mayor a 500 |
 
-Para consultar los endpoints es necesario habilitar el servidor usando el comando `npm run server` en la consola de la terminal. Habiendo hecho lo anterior, se abre el navegador y se escribe la url <localhost:3000/>, esta ruta permitirá acceder a la información consultada de acuerdo a los endpoints.
+Para consultar los endpoints es necesario habilitar el servidor usando el comando `npm run server` en la consola de la terminal. Habiendo hecho lo anterior, se abre el navegador y se escribe la url <http://localhost:3000/>, esta ruta permitirá acceder a la información consultada de acuerdo a los endpoints.
 
 Para deshabilitar el servidor, es necesario ubicarse en la consola de la terminal y presionar `ctrl + C`, después presionar `S` y dar enter.
 
@@ -154,3 +156,5 @@ Para deshabilitar el servidor, es necesario ubicarse en la consola de la termina
 1. Endpoint para consultar todos los estudiantes que tengan `credits` mayor a 500.
 
 ![Imagen](https://github.com/DanielaBeltranCruz/Code-Challenge/blob/master/images/endpoint_03.PNG)
+
+
